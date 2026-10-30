@@ -1,0 +1,379 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NODELU | Notte de Lusso</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{--cream:#f1e5df;--pink:#d8b5ba;--brown:#523b39;--maroon:#642c3a;--burgundy:#351722}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--brown);font-family:"DM Sans",Arial,sans-serif}
+header{position:sticky;top:0;z-index:10;background:#eadbd7f5;border-bottom:1px solid #dbc4c4}
+nav{max-width:1150px;margin:auto;padding:17px 24px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+.logo{font:700 28px Georgia,serif;letter-spacing:3px;color:var(--burgundy);text-decoration:none}
+.logo small{display:block;font:10px Arial;letter-spacing:3px;text-align:center}
+.links{display:flex;gap:17px;flex-wrap:wrap}
+.links a{font-size:13px;color:var(--brown);text-decoration:none;font-weight:700}
+.links a:hover{color:var(--maroon)}
+section{padding:80px 24px;scroll-margin-top:110px}
+.wrap{max-width:1150px;margin:auto}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--burgundy)}
+h1{font-size:clamp(48px,7vw,88px);line-height:1.08}
+h2{font-size:40px}
+h3{font-size:22px}
+p{line-height:1.8}
+.center{text-align:center}
+.eyebrow{font-size:12px;letter-spacing:3px;color:var(--maroon);font-weight:700;text-transform:uppercase}
+.hero{min-height:550px;background:linear-gradient(120deg,#d8b4b6,#eadbd5 62%,#b17a86);display:flex;align-items:center}
+.hero .wrap{width:100%;display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+.hero p{max-width:470px}
+.hero-art{height:360px;border-radius:200px 200px 22px 22px;background:linear-gradient(145deg,#a75d6b,#4c1729);box-shadow:20px 20px 0 #edc3c9;display:flex;align-items:center;justify-content:center;flex-direction:column}
+.hero-art strong{font:700 65px Georgia,serif;letter-spacing:6px;color:#fff0e9}
+.hero-art small{letter-spacing:4px;color:#ffe2dc}
+.btn{display:inline-block;border:0;border-radius:30px;background:var(--maroon);color:white;padding:14px 27px;text-decoration:none;font:700 14px "DM Sans",Arial;cursor:pointer}
+.profile{background:#e9dcd8}
+.lead{max-width:690px;margin:0 auto 35px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:23px}
+.card,.product{background:#f9f0ec;border:1px solid #dbc4c4;border-radius:18px;overflow:hidden;box-shadow:0 8px 28px #6c28300d}
+.card{padding:27px}
+.card p{font-size:14px}
+.product .photo{height:270px;background:#f7ede9;display:flex;align-items:center;justify-content:center}
+.product img{display:block;width:100%;height:100%;object-fit:contain;padding:10px}
+.product .info{padding:23px}
+.product .brand{font-size:11px;letter-spacing:2px;font-weight:700;color:#762d3d}
+.product .price{font-size:17px;font-weight:700;color:var(--maroon)}
+.tag{display:inline-block;background:var(--pink);color:var(--maroon);padding:7px 12px;border-radius:20px;font-size:11px;font-weight:700}
+.catalog-tools{display:flex;gap:12px;margin:25px 0}
+input,select,textarea{font:inherit;color:#351722;background:#fffaf8;border:1px solid #ead0d0;border-radius:9px;padding:14px}
+.catalog-tools input{flex:1;min-width:0}
+.catalog-tools select{min-width:210px}
+.locations{background:#dfcbc8}
+.supplier{display:block;text-decoration:none;color:var(--brown)}
+.supplier:hover{border-color:var(--maroon)}
+.visit{color:var(--maroon);font-size:13px;font-weight:700}
+.contact{background:var(--burgundy);color:#fff0ed}
+.contact h2,.contact a{color:#fff0ed}
+.review-area{max-width:760px;margin-top:38px;padding:28px;background:#fff7f5;color:var(--brown);border-radius:20px}
+.review-area h2,.review-area h3{color:var(--burgundy)}
+.rating-group{margin:20px 0}
+.stars{display:flex;gap:5px}
+.star{border:0;background:transparent;color:#bda5a6;font-size:36px;cursor:pointer}
+.star.active{color:#b96b36}
+textarea{display:block;width:100%;min-height:110px;margin-top:10px;resize:vertical}
+.review-item{border-top:1px solid #ead0d0;padding:15px 0;overflow-wrap:anywhere}
+footer{background:#35101d;color:#f7dadd;text-align:center;padding:25px}
+@media(max-width:760px){
+nav,.links{justify-content:center}
+.hero .wrap,.grid{grid-template-columns:1fr}
+.hero-art{height:260px}
+.hero-art strong{font-size:45px}
+.catalog-tools{flex-direction:column}
+.catalog-tools select{width:100%}
+section{padding:60px 20px}
+}
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<a class="logo" href="#home">NODELU<small>NOTTE DE LUSSO</small></a>
+<div class="links">
+<a href="#home">Home</a>
+<a href="#profile">Profile</a>
+<a href="#product">Product</a>
+<a href="#cabang">Toko Cabang</a>
+<a href="#supplier">Supplier</a>
+<a href="#kontak">Contact Us</a>
+</div>
+</nav>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+<div class="wrap">
+<div>
+<div class="eyebrow">The art of timeless beauty</div>
+<h1>Beauty, in<br>every shade.</h1>
+<p>Selamat datang di <b>NODELU — Notte de Lusso</b>. Koleksi makeup bernuansa elegan untuk menemani setiap momen spesialmu.</p>
+<a href="#product" class="btn">Explore Collection ✦</a>
+</div>
+<div class="hero-art"><strong>NODELU</strong><small>NOTTE DE LUSSO</small></div>
+</div>
+</section>
+
+<section class="profile" id="profile">
+<div class="wrap center">
+<div class="eyebrow">Get to know us</div>
+<h2>Our Beauty Story</h2>
+<p class="lead">NODELU (Notte de Lusso) adalah konsep brand makeup dengan sentuhan luxury, soft feminine, dan modern elegance. Kami percaya makeup adalah ruang untuk berekspresi dan merayakan keunikan diri.</p>
+<div class="grid">
+<div class="card"><h3>✦ Elegant Beauty</h3><p>Nuansa cantik dan mewah yang tetap terasa hangat.</p></div>
+<div class="card"><h3>♡ Made for You</h3><p>Pilihan warna untuk berbagai mood dan gaya.</p></div>
+<div class="card"><h3>✧ Everyday Glow</h3><p>Dari makeup sehari-hari sampai special occasion.</p></div>
+</div>
+</div>
+</section>
+
+<section id="product">
+<div class="wrap">
+<div class="center">
+<div class="eyebrow">The Beauty Edit</div>
+<h2>NODELU Beauty Collection</h2>
+<p>Makeup favorites, all in one place.</p>
+</div>
+<div class="catalog-tools">
+<input id="searchProduct" placeholder="Cari brand atau produk...">
+<select id="categoryFilter"><option value="">Semua kategori</option></select>
+</div>
+<p id="productCount" class="center"></p>
+<div class="grid" id="productList"></div>
+</div>
+</section>
+
+<section id="cabang" class="locations">
+<div class="wrap">
+<div class="center"><div class="eyebrow">Find Us</div><h2>Toko Cabang</h2></div>
+<div class="grid">
+<div class="card"><span class="tag">Open</span><h3>NODELU Bandung</h3><p>Bandung</p></div>
+<div class="card"><span class="tag">Open</span><h3>NODELU Jakarta</h3><p>Jakarta</p></div>
+<div class="card"><span class="tag">Open</span><h3>NODELU Depok</h3><p>Depok</p></div>
+<div class="card"><span class="tag">Coming Soon</span><h3>NODELU Tangerang</h3><p>Tangerang</p></div>
+<div class="card"><span class="tag">Coming Soon</span><h3>NODELU Bali</h3><p>Bali</p></div>
+<div class="card"><span class="tag">Coming Soon</span><h3>NODELU Lombok</h3><p>Lombok</p></div>
+</div>
+</div>
+</section>
+
+<section id="supplier">
+<div class="wrap">
+<div class="center"><div class="eyebrow">Our Beauty Circle</div><h2>Mitra Pemasok NODELU</h2></div>
+<div class="grid">
+<a class="card supplier" href="https://www.sephora.co.id/" target="_blank"><h3>Sephora Indonesia</h3><p>Beauty & prestige cosmetics</p><span class="visit">Kunjungi website ↗</span></a>
+<a class="card supplier" href="https://www.guardianindonesia.co.id/" target="_blank"><h3>Guardian</h3><p>Beauty & personal care</p><span class="visit">Kunjungi website ↗</span></a>
+<a class="card supplier" href="https://www.sociolla.com/" target="_blank"><h3>Sociolla</h3><p>Beauty & skincare</p><span class="visit">Kunjungi website ↗</span></a>
+<a class="card supplier" href="https://www.watsons.co.id/" target="_blank"><h3>Watsons</h3><p>Beauty & health</p><span class="visit">Kunjungi website ↗</span></a>
+<a class="card supplier" href="https://www.beautyhaul.com/" target="_blank"><h3>BeautyHaul</h3><p>Beauty retail</p><span class="visit">Kunjungi website ↗</span></a>
+</div>
+</div>
+</section>
+
+<section class="contact" id="kontak">
+<div class="wrap">
+<h2>Contact Us</h2>
+<p><b>Email:</b> <a href="mailto:NotteDeLusso@Gmail.com">NotteDeLusso@Gmail.com</a></p>
+<p><b>Instagram:</b> <a href="https://www.instagram.com/nodelu.beauty/">@Nodelu.beauty</a></p>
+<p><b>WhatsApp:</b> <a href="https://wa.me/62881022209931">+62 881 0222 09931</a></p>
+<p><b>Lokasi:</b> Jl Aceh</p>
+<p><b>Jam layanan:</b><br>Weekdays 09:00–20:00<br>Weekend 10:00–21:00</p>
+
+<div class="review-area">
+<h2>Rating Product & Layanan Toko</h2>
+<form id="ratingForm">
+<div class="rating-group"><b>Rating Product</b><div class="stars" id="productStars"></div></div>
+<div class="rating-group"><b>Rating Layanan Toko</b><div class="stars" id="serviceStars"></div></div>
+<label for="reviewText">Ulasan (opsional)</label>
+<textarea id="reviewText" maxlength="500" placeholder="Tulis ulasan di sini..."></textarea>
+<button class="btn" type="submit">Kirim Rating</button>
+<p id="ratingInfo"></p>
+</form>
+<h3>Ulasan Pengunjung</h3>
+<div id="reviewList"></div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>© 2026 NODELU — Notte de Lusso. Crafted with elegance ♡</footer>
+
+<script>
+// SEMUA 5 FOTO ASLI ADA DI DALAM KODE.
+// FOTO DIPERKECIL AGAR BISA DIKIRIM MELALUI CHAT.
+// URUTAN: FOUNDATION, BLUSH, EYESHADOW, PRIMER, LIPSTICK.
+
+const images = [
+"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"
+];
+
+const products=[
+{category:"Foundation",brand:"NARS",name:"Light Reflecting Foundation",price:780000,image:images[0]},
+{category:"Blush On",brand:"Dior",name:"Backstage Rosy Glow",price:850000,image:images[1]},
+{category:"Eyeshadow Palette",brand:"Huda Beauty",name:"Nude Obsessions Palette",price:560000,image:images[2]},
+{category:"Primer",brand:"Bobbi Brown",name:"Vitamin Enriched Face Base",price:690000,image:images[3]},
+{category:"Lipstick",brand:"Dior",name:"Rouge Dior",price:750000,image:images[4]}
+];
+
+const filter=document.getElementById("categoryFilter");
+
+products.forEach(p=>{
+const option=document.createElement("option");
+option.value=p.category;
+option.textContent=p.category;
+filter.appendChild(option);
+});
+
+function renderProducts(){
+const keyword=document.getElementById("searchProduct").value.toLowerCase().trim();
+const category=filter.value;
+const found=products.filter(p=>
+(!category||p.category===category)&&
+(p.category+" "+p.brand+" "+p.name).toLowerCase().includes(keyword)
+);
+document.getElementById("productCount").textContent=
+"Menampilkan "+found.length+" dari "+products.length+" produk";
+
+const list=document.getElementById("productList");
+list.replaceChildren();
+
+found.forEach(p=>{
+const card=document.createElement("article");
+card.className="product";
+
+const photo=document.createElement("div");
+photo.className="photo";
+
+const img=document.createElement("img");
+img.src="data:image/jpeg;base64,"+p.image;
+img.alt=p.category+" "+p.brand;
+photo.appendChild(img);
+
+const info=document.createElement("div");
+info.className="info";
+
+const tag=document.createElement("span");
+tag.className="tag";
+tag.textContent=p.category;
+
+const brand=document.createElement("p");
+brand.className="brand";
+brand.textContent=p.brand;
+
+const name=document.createElement("h3");
+name.textContent=p.name;
+
+const price=document.createElement("p");
+price.className="price";
+price.textContent="Rp "+p.price.toLocaleString("id-ID");
+
+info.append(tag,brand,name,price);
+card.append(photo,info);
+list.appendChild(card);
+});
+
+if(found.length===0)list.textContent="Produk tidak ditemukan.";
+}
+
+document.getElementById("searchProduct").addEventListener("input",renderProducts);
+filter.addEventListener("change",renderProducts);
+renderProducts();
+
+// RATING PRODUK DAN LAYANAN
+let productRating=0;
+let serviceRating=0;
+
+function drawStars(id,type){
+const area=document.getElementById(id);
+area.replaceChildren();
+const value=type==="product"?productRating:serviceRating;
+
+for(let i=1;i<=5;i++){
+const button=document.createElement("button");
+button.type="button";
+button.className="star"+(i<=value?" active":"");
+button.textContent="★";
+button.setAttribute("aria-label",i+" bintang");
+button.onclick=()=>{
+if(type==="product")productRating=i;
+else serviceRating=i;
+drawStars(id,type);
+};
+area.appendChild(button);
+}
+}
+
+drawStars("productStars","product");
+drawStars("serviceStars","service");
+
+const storageKey="nodelu-reviews-v1";
+
+function getReviews(){
+try{return JSON.parse(localStorage.getItem(storageKey)||"[]");}
+catch{return [];}
+}
+
+function showReviews(){
+const list=document.getElementById("reviewList");
+list.replaceChildren();
+const reviews=getReviews();
+
+if(reviews.length===0){
+list.textContent="Belum ada ulasan.";
+return;
+}
+
+reviews.slice().reverse().forEach(r=>{
+const item=document.createElement("div");
+item.className="review-item";
+
+const stars=document.createElement("strong");
+stars.textContent="Product: "+"★".repeat(r.product)+
+" | Layanan: "+"★".repeat(r.service);
+item.appendChild(stars);
+
+if(r.text){
+const p=document.createElement("p");
+p.textContent=r.text;
+item.appendChild(p);
+}
+list.appendChild(item);
+});
+}
+
+document.getElementById("ratingForm").addEventListener("submit",function(e){
+e.preventDefault();
+const message=document.getElementById("ratingInfo");
+
+if(!productRating||!serviceRating){
+message.textContent="Pilih kedua rating terlebih dahulu.";
+return;
+}
+
+const reviews=getReviews();
+reviews.push({
+product:productRating,
+service:serviceRating,
+text:document.getElementById("reviewText").value.trim()
+});
+
+try{
+localStorage.setItem(storageKey,JSON.stringify(reviews));
+}catch{
+message.textContent="Rating tidak dapat disimpan.";
+return;
+}
+
+message.textContent="Rating berhasil disimpan!";
+this.reset();
+productRating=0;
+serviceRating=0;
+drawStars("productStars","product");
+drawStars("serviceStars","service");
+showReviews();
+});
+
+showReviews();
+</script>
+</body>
+</html>
